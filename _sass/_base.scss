@@ -32,6 +32,7 @@ a, table.table a {
   }
 }
 
+
 figure, img {
   max-width: 90vw;
 }
@@ -460,6 +461,25 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
+      .img-fluid, .modal-dialog.cascading-modal.modal-avatar .modal-header, .video-fluid {
+        max-width: 100%;
+        height: auto;
+      }
+      .teaser {
+        border-radius: 10px;
+        box-shadow: 3px 3px 6px #888;
+        height: 120px;
+        width: 180px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        object-fit: cover;
+      }
+
+      
+
+
+
       margin-bottom: 1rem;
       .abbr {
         height: 2rem;
@@ -469,6 +489,7 @@ footer.sticky-bottom {
           background-color: var(--global-theme-color);
           padding-left: 1rem;
           padding-right: 1rem;
+          position: absolute;
           a {
             color: white;
             &:hover {

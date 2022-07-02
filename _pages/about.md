@@ -6,7 +6,7 @@ subtitle: #<a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: sicheng.png
+  image: sicheng2.png
   image_cicular: false # crops the image to make it circular
   #address: >
     #<p>555 your office number</p>
@@ -17,9 +17,10 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I'm Sicheng Mo, an incoming student at UCLA MSCS.
+I'm Sicheng Mo, an incoming student at UCLA MSCS. I obtained my bachelor's degree of Computer Science and Mathematics at University of Wisconsin-Madison. I at that time researched under the supervision of [Prof.Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof.Fred Sala](https://pages.cs.wisc.edu/~fredsala/)
 
-Before this, I obtained my bachler's degress of Computer Science and Mathematics at University of Wisconsin-Madison. I at that time researched under the supervision of [Prof.Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof.Fred Sala](https://pages.cs.wisc.edu/~fredsala/)
+My research interests are in Computer Vision and Machine learning.
+
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
