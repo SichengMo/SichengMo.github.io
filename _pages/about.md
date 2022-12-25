@@ -6,8 +6,8 @@ subtitle: #<a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
-  image: sicheng2.png
-  image_cicular: false # crops the image to make it circular
+  image: my_photo/sm2.jpg
+  image_cicular: true # crops the image to make it circular
   #address: >
     #<p>555 your office number</p>
     #<p>123 your address street</p>
@@ -17,9 +17,9 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I'm Sicheng Mo, an incoming student at UCLA MSCS. I obtained my bachelor's degree of Computer Science and Mathematics at University of Wisconsin-Madison. I at that time researched under the supervision of [Prof.Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof.Fred Sala](https://pages.cs.wisc.edu/~fredsala/)
+I am a first-year MS student in Computer Science at UCLA. I obtained my bachelor's degree of Computer Science and Mathematics at University of Wisconsin-Madison. I at that time researched under the supervision of [Prof.Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof.Fred Sala](https://pages.cs.wisc.edu/~fredsala/)
 
-My research interests are in Computer Vision and Machine learning.
+My research interests are in Computer Vision and Machine learning. Specifically, I am particularly interested in video understanding and interpretable human-AI interaction.
 
 
 

@@ -469,11 +469,11 @@ footer.sticky-bottom {
         border-radius: 10px;
         box-shadow: 3px 3px 6px #888;
         height: 120px;
-        width: 150px;
+        width: 250px;
         margin-top: 5px;
         margin-left: 5px;
         margin-bottom: 5px;
-        object-fit: cover;
+        object-fit: scale-down;
       }
 
       
@@ -507,14 +507,15 @@ footer.sticky-bottom {
       }
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          color: var(--global-text-color);
+          border-bottom: 1px dashed var(--global-text-color);
           &:hover {
               border-bottom-style: solid;
               text-decoration: none;
           }
         }
         > em {
-          border-bottom: 1px solid;
+          border-bottom: 1px solid var(--global-text-color);
           font-style: normal;
         }
       }
@@ -527,8 +528,8 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+            color: var(--global-text-color);
+            border-color: var(--global-text-color);
           }
         }
       }
