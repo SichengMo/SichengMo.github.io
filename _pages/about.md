@@ -17,11 +17,14 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a first-year MS student in Computer Science at UCLA. I obtained my bachelor's degree of Computer Science and Mathematics at University of Wisconsin-Madison. I at that time researched under the supervision of [Prof.Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof.Fred Sala](https://pages.cs.wisc.edu/~fredsala/)
+I am currently a second-year Master of Science student in Computer Science at UCLA, where I am being advised by [Prof. Bolei Zhou](https://boleizhou.github.io/). I earned my Bachelor's degree in Computer Science and Applied Mathematics from the University of Wisconsin-Madison, during which I conducted research under the guidance of [Prof. Yin Li](https://www.biostat.wisc.edu/~yli/) and [Prof. Fred Sala](https://pages.cs.wisc.edu/~fredsala/).
 
-My research interests are in Computer Vision and Machine learning. Specifically, I am particularly interested in video understanding and interpretable human-AI interaction.
+My research lies in **Computer Vision**. I am particularly interested in large generative models for visual content generation and understanding. I also worked on scalable language-driven video understanding and 3D reconstruction before. 
 
+In the past, my work extended to the field of machine learning, specifically on causal inference for Out-of-distribution generalization.
 
+[//]: # ()
+[//]: # (My research interests are in Computer Vision and Machine learning. Specifically, I am particularly interested in video understanding, interpretable deep learning and controllable large generative models.)
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
