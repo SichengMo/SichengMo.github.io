@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two paper accepted to CVPR 2024! Thanks to my collaborators and advisors!
+Two papers accepted to CVPR 2024! Thanks to my collaborators and advisors!
