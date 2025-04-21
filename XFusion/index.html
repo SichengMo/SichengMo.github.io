@@ -183,7 +183,6 @@
                 <!-- &nbsp;&nbsp;&nbsp; -->
               </span>
             </div>
-
             <div class="is-size-5 publication-authors">
               <div>
                 <a href="https://www.cs.wisc.edu/" style="margin-right: 30px;">
@@ -196,6 +195,7 @@
                 <a href="https://research.adobe.com/">
                   <img src="./static/images/adobe-logo.png" style="height: 40px;">
                 </a>
+                <br>
               </div>
               <span class="author-block">1. University of California, Los Angeles</span>
               &nbsp;&nbsp;&nbsp;
@@ -267,11 +267,11 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <!-- <h4 class="subtitle has-text-centered"> -->
-          <center><img src='./static/images/yochameleon-bo.png' width="2000"></center>
+          <center><img src='./static/images/xfusion-teaser.gif' width="500"></center>
           <br>
-          <!-- <text style="font-size:110%">Given just a few images of a novel subject (e.g., a dog named <text style="font-family: Courier;color:#ff8c00;">&lt;bo&gt;</text>), Yo’LLaVA learns to facilitate textual/visual conversations centered around that subject.</text> -->
-          <text style="font-size:110%">Using only 3-5 images of a novel concept/subject, we personalize Large Multimodal Models (e.g., Chameleon) so that they retain their original capabilities while enabling tailored language and vision generation for the novel concept.
-          </text>
+          <center>
+          <text style="font-size:110%">We introduce X-Fusion - a novel framework that adapts pretrained LLMs (e.g., LLaMA) to new modalities (e.g., vision) <br>while retaining their language capabilities and world knowledge!
+          </text></center>
         <!-- </h4> -->
       </div>
     </div>
@@ -292,26 +292,6 @@
                   We find that incorporating understanding-focused data improves generation quality, reducing image data noise enhances overall performance, and feature alignment accelerates convergence for smaller models but has minimal impact on larger ones.
                   Our findings provide valuable insights into building efficient unified multimodal models.
 
-<!--                  <br>-->
-<!--                  In this paper, <b>we introduce Yo'Chameleon, the first attempt to study personalization for Large Multimodal Models</b>.-->
-<!--                  <br>-->
-<!--                  <br>-->
-<!--                  <i>[Problem Statement]</i><br>-->
-<!--                  Given 3-5 images of a particular concept, Yo'Chameleon leverages <b><text style="color:green;'">soft-prompt tuning</text></b> to embed subject-specific information to:-->
-<!--                  <br>-->
-<!--                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (i) answer questions about the subject (<i>personalized language generation</i>)-->
-<!--                  <br>-->
-<!--                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and (ii) recreate pixel-level details to produce images of the subject in new contexts (<i>personalized vision generation</i>)-->
-<!--                  <br><br>-->
-<!--                  <i>[Approach/ Results]</i><br>-->
-<!--                  Yo'Chameleon is trained with:-->
-<!--                  <br>(i) <b><text style="color:green">a self-prompting optimization mechanism</text></b> to balance performance across multiple modalities,-->
-<!--                  <br>and (ii) <b><text style="color:green;'">a ``soft-positive" image generation approach</text></b> to enhance image quality in a few-shot setting.-->
-<!--                  <br>-->
-<!--                  Our experiments demonstrate that X-Fusion consistently outperforms alternative architectures on both image-to-text and text-to-image tasks.-->
-<!--                  We find that incorporating understanding-focused data improves generation quality, reducing image data noise enhances overall performance, and feature alignment accelerates convergence for smaller models but has minimal impact on larger ones.-->
-<!--                  Our findings provide valuable insights into building efficient unified multimodal models.-->
-
            </p>
           </div>
         </div>
@@ -319,13 +299,29 @@
     </div>
   </section>
 
+</section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3">⚡ X-Fusion Capabilities</h2>
+          <center><img src="./static/images/xfusion-abilities.gif" width="100%"></center>
+<!--           <video width="100%" controls autoplay>
+            <source src="./static/videos/xfusion-abilities.mp4" type="video/mp4">
+          </video> -->
+        </div>
+      </div>
+    </div>
+  </section>
+<hr>
 
 <!--  # The Start of the Main Content # -->
 
 <section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> X-Fusion Approach</h2>
+      <h2 class="title is-3">📐 X-Fusion Artchitecture</h2>
     </div>
   </div>
 <div class="container is-max-desktop">
@@ -334,73 +330,27 @@
       <div class="content has-text-justified">
             <center><td width="90%">
                 <img id="teaser"src="./static/images/xfusion_approach.jpg" alt="Training Pipeline">
-            </td></center>
-                    <i> In this paper, we introduce X-Fusion.</i>
-
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths">
-      <h2 class="title is-3"> X-Fusion Training Recipe </h2>
+            </td>
+          </center>
+          Conceptual comparison of four model architecture baselines. Here, we illustrate how each layer processes the sequential multi-modal feature. (a) Single Tower: Directly fine-tuning pre-trained LLM.
+    (b) Gated Layer: Duplicate Each LLM layer as the gated vision layer, 
+    (c) Dual Projection: Duplicate QKV matric and MLP layer for vision modality, 
+    (d) Dual Tower: Duplicated transformer block for vision modality.
+      </div>
+      <div>
+        <center><img src="./static/images/noise.png" width="90%"></img></center>
+      </div>
+      <br>
+      <div>
+        <center><img src="./static/images/data-ratio.png" width="90%"></img></center>
+      </div>
+      <br>
+      <center><b>❗ Please refer to the main paper for detailed ablation experiments! ❗</b></center>
     </div>
   </div>
-    <table class="center" style="max-width:1100px;">
-        <tr>
-            <td>
-                <b style="font-size:120%;background-color: lightyellow;">⚙️ Soft-prompt:</b><br>
-                <p>We define a personalized soft-prompt for the subject as:</p>
-                <center>
-                <div class="quote">
-                    "<b><text style="font-family: Courier; color:blue">&lt;sks&gt;</text></b> is <b><text style="font-family: Courier; color:red">&lt;g-tokens&gt</text></text><text style="font-family: Courier;color:green">&lt;u-tokens&gt</text></b>"
-                </div>
-                </center>
-                <br>
-                <p>Where:
-                  <br>
-                  • <b><text style="font-family: Courier; color:blue">&lt;sks&gt;</text></b>: an identifier for the subject
-                  <br>
-                  • <b><text style="font-family: Courier; color:red">&lt;g-tokens&gt</text></b> denotes <i>k</i> latent tokens used for personalized image generation task (<text style="font-family: Courier; color:red">&lt;token<sub>1</sub>&gt...</text><text style="font-family: Courier;color:red">&lt;token<sub>k</sub>&gt</text></b>)
-                  <br>
-                  • <b><text style="font-family: Courier; color:green">&lt;u-tokens&gt</text></b> denotes <i>h</i> latent tokens used for personalized image generation task (<text style="font-family: Courier; color:green">&lt;token<sub>1</sub>&gt...</text><text style="font-family: Courier;color:green">&lt;token<sub>h</sub>&gt</text></b>)
-                  <br>
-            </td>
-        </tr>
-        <tr>
-          <br>
-          <td>
-            <b style="font-size:120%;background-color: lightyellow;">🌱 "Soft positive" images</b>:
-            <br><br>
-            To overcome the limited number of training images (3-5 images), we propose to use “soft-positive” images with dynamic prompt length to enhance the image generation quality.
-
-            <!-- The key insight is that hard negative images can share varying degrees of similar characteristics with the positive samples, and thus should contribute differently to the learning process. -->
-            <br><br>
-            <center><img src="./static/images/soft-positive.png" alt="soft-positive-images" style="width: 450px; height: auto;"></center>
-            <i>“Soft positive” images.
-            <!-- Retrieved images are ranked according to their similarity to positive images using CLIP image similarity scores. -->
-            Images that are more similar to the actual positive images are described with more latent tokens (i.e., more details).</i>
-        </tr>
-        <tr>
-          <br>
-          <td>
-            <b style="font-size:120%;background-color: lightyellow;">🌱 "Soft positive" images</b>:
-            <br><br>
-            To overcome the limited number of training images (3-5 images), we propose to use “soft-positive” images with dynamic prompt length to enhance the image generation quality.
-
-            <!-- The key insight is that hard negative images can share varying degrees of similar characteristics with the positive samples, and thus should contribute differently to the learning process. -->
-            <br><br>
-            <center><img src="./static/images/soft-positive.png" alt="soft-positive-images" style="width: 450px; height: auto;"></center>
-            <i>“Soft positive” images.
-            <!-- Retrieved images are ranked according to their similarity to positive images using CLIP image similarity scores. -->
-            Images that are more similar to the actual positive images are described with more latent tokens (i.e., more details).</i>
-        </tr>
-
-    </table>
-
-      <centering>
-      </centering>
-<!--    </div>-->
-  </div>
-</section>
-
+</div>
 <hr>
+</section>
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -408,6 +358,7 @@
         <div class="column is-six-fifths">
           <h2 class="title is-3">🖼️ Qualitative Result: Text-to-Image Generation</h2>
           <center><img src="./static/images/xfusion_results_gen.jpg" width="90% px"></center>
+          <hr>
           <br><br>
           <h2 class="title is-3">🖼️ Qualitative Result: Image Captioning</h2>
           <center><img src="./static/images/xfusion_qual_2.jpg" width="90% px"></center>
@@ -417,123 +368,17 @@
   </section>
 <hr>
 
-<section class="section">
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-six-fifths">
-      <h2 class="title is-3">📈 Additional "Qualitative" Experiements</h2>
-    </div>
-  </div>
-<div class="container is-max-desktop">
-  <div class="columns is-centered">
-    <div class="column is-full-width">
-      <div class="content has-text-justified"> 
-    <table class="center" style="max-width:1100px;">
-        <tr>
-            <td width="30%">
-                <b style="font-size:120%;">📊 Full-model Finetuning vs. Soft Prompt</b>
-                <br><br>
-                In this experiment, our goal is to verify whether soft prompt tuning could achieve performance comparable to full- model fine-tuning, which is commonly used in personalized image generation.
-                <br>
-                <br>
-                We collected photos for three concepts: one person (300 images), one dog (500 images), and one cat (500 images).
-                <br><br>
-                Qualitative result (right) effectively demonstrates the advantages of soft prompt tuning over full-model fine-tuning: (1) it matches the performance of full-model fine-tuning in personalized tasks and (2) mitigates catastrophic forgetting.
-                <br>
-                (Quantitative table can be found in Supplementary)
-            </td>
-            <td>
-                <center><img id="teaser"src="./static/images/softprompt-vs-fullmodel.png" alt="soft prompt vs fullmodel" style="width: 450px; height: auto;"></center>
-            </td>
-        </tr>
-        <tr>
-          <br>
-          <td>
-            <b style="font-size:120%;">📊 Unbalanced performance across modalities</b>:
-            <br><br>
-            Optimized tokens for one task cannot effectively perform another, and simply training on a mixture of data yields suboptimal performance across tasks.
-            <!-- We propose a self-prompting approach, where the model predicts which task to perform first, achieving the best of both worlds. -->
-            <br><br>
-            <center><img src="./static/images/modalities.png" alt="modalities" style="width: 500px; height: auto;"></center>
-            <!-- <i>“Soft positive” images. -->
-            <!-- Retrieved images are ranked according to their similarity to positive images using CLIP image similarity scores. -->
-            <!-- Images that are more similar to the actual positive images are described with more latent tokens (i.e., more details).</i> -->
-
-          </td>
-          <td width="30%">
-            <b style="font-size:120%;">📊 Limitations </b>:
-            <br><br>
-            Our method is not without limitations.<br>
-            - 1st: when dealing with objects that have intricate details (e.g., text on a cup or characters on a keyboard).<br>
-            - 2nd: our method’s performance is constrained by the capabilities of the base model (i.e., multiple personalized concepts generation).<br>
-            - Lastly, there remains a significant gap for personalizing human faces.
-            <br><br>
-            <center><img src="./static/images/limitation.png" alt="limitation" style="width: 500px; height: auto;"></center>
-          </td>
-        </tr>
-    </table>
-
-      <centering>
-      </centering>           
-    </div>
-  </div>
-</section>
-
-<hr>
-
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">📥 BibTeX</h2>
       <pre><code>
-@article{yochameleon,
-  title={Yo'Chameleon: Personalized Vision and Language Generation},
-  author={Thao Nguyen and Krishna Kumar Singh and Jing Shi and Trung Bui and Yong Jae Lee and Yuheng Li},
-  journal={2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2025},
-}
+        to be updated
   </code></pre>
     </div>
-<center>📣 Related Works on Personalization for LMMs can be found via this <b><a href="https://github.com/thaoshibe/awesome-personalized-lmms?tab=readme-ov-file#papers" target="_blank">[📣 Awesome Personalized LMMs -- GitHub]</a></b></center>
-
-  </section>
-
-    <section class="section"  style="background-color:#e4e4f781">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-          <h2 class="title is-3">📜 Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-
-                  We propose X-Fusion, a framework that extends pretrained Large Language Models (LLMs) for multimodal tasks while preserving their language capabilities.
-                  X-Fusion employs a dual-tower design with modality-specific weights, keeping the LLM’s parameters frozen while integrating vision-specific information for both understanding and generation.
-                  Our experiments demonstrate that X-Fusion consistently outperforms alternative architectures on both image-to-text and text-to-image tasks.
-                  We find that incorporating understanding-focused data improves generation quality, reducing image data noise enhances overall performance, and feature alignment accelerates convergence for smaller models but has minimal impact on larger ones.
-                  Our findings provide valuable insights into building efficient unified multimodal models.
-           </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
 
   <section class="section" id="Acknowledgement">
     <div class="container is-max-desktop content">
       <h2 class="title">💌 Acknowledgement</h2>
-<!--  <p>-->
-<!--I would like to express my gratitude to my Adobe Research's mentors: Dr. Krishna, Dr. Jing Shi, and Dr. Trung Bui for their discussions. Special thanks to my advisor, Prof. Yong Jae Lee, who provided endless insights and guidance for this project (as always).-->
-
-<!--A big shout-out to my primary fellow mentee Sicheng Mo—he taught me so much about coding. Without him, I’d still be using TensorBoard instead of WanDB! (Also, he has wonderful taste in food and restaurants.)-->
-<!--Additionally, thanks to (technically-not) mentor Fangzhou Mu for hosting many Friday dinners and board game nights during the summer 🥓🍣🍱 (though, he’s not a fan of Thai foods —meh~).-->
-
-<!--And finally, saving the best for last: I couldn’t have completed this project without the unwavering support (and pushes) of my main Adobe juan mentor, Dr. Yuheng Li :xixi:. Thank you so much!-->
-<!--  </p>-->
-
-  <p>
-  <!-- <b>Usage and License Notices</b>: The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes. -->
-  </p>
       <p>
         This website is adapted from <a
         href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
